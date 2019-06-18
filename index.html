@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>approachable and relatable design</title>
+    <link rel="stylesheet" href="normalize.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="sidebar">
+            <img src="logowhite.svg" class="logo" alt="white logo" style="width:60%;">
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="aboutme.html">About me</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <section class="hero">
+            </section>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="i_love_being_me.png" style="height: 639px;" alt="painting number 1">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="glosowanie.png" style="height: 639px;" alt="painting number 2">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="usmieszki03.png" style="height:639px" alt="painting number 3">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div class="footer">
+            <footer>
+                <p>&copy; michal jaworski &#40;2019&#41;</p>
+            </footer>
+        </div>
+
+    </div>
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+</script>
+</body>
+
+</html>

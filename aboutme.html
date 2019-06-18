@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About me</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="sidebar">
+            <img src="logowhite.svg" class="logo" style="width:60%" alt="white logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="aboutme.html">About me</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <section class="hero">
+                <img src="Michal%20super%20awesome%20smile.png" class="michal" alt="michal smiling">
+                <div class="hero-content">
+                <h1>With a mission<br>to make things better</h1>
+                    <p>My name is Michal Jaworski, I'm a student of Multimedia Design and Communication at Copenhagen School of Design and Technology. I am a geek when it comes to graphic design, UX and motion graphics.<br>My focus is to deliver meaningful, fullfiling yet fun and inspring digital solutions. I believe that the role of a designer is to push limits creatively and technically.<br>Let me know if you would like to work with me.</p>
+                    <button onclick="sendemail()" class="action-btn" id="emailID"> Message me </button>
+                </div>
+            </section>
+            </div>
+        <div class="footer">
+            <footer>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/michal-jaworski/"><svg xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 82 82"><path d="M41,82A41,41,0,1,1,82,41,41,41,0,0,1,41,82ZM41,2A39,39,0,1,0,80,41,39,39,0,0,0,41,2Z" fill="#dbc3c3"/><path d="M30.93,55.91h-7V33.43h7ZM27.24,30.62h-.05A3.9,3.9,0,0,1,23,26.72c0-2.22,1.69-3.9,4.29-3.9a3.92,3.92,0,0,1,4.23,3.9C31.52,28.9,29.87,30.62,27.24,30.62ZM59,55.91H51V44.28c0-3-1.24-5.12-4-5.12a4,4,0,0,0-3.8,2.75,5.09,5.09,0,0,0-.17,1.83V55.91H35.21s.1-20.6,0-22.47h7.88V37c.47-1.54,3-3.74,7-3.74,5,0,8.91,3.23,8.91,10.19Z" fill="#dbc3c3"/></svg><p></p></a></li>
+                <li><a href="https://www.facebook.com/michjawo"><svg xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 82 82"><path d="M41,82A41,41,0,1,1,82,41,41,41,0,0,1,41,82ZM41,2A39,39,0,1,0,80,41,39,39,0,0,0,41,2Z" fill="#dbc3c3"/><path d="M32.32,34.9H36V31.29c0-1.6,0-4.06,1.2-5.58A6.62,6.62,0,0,1,43,23a23.38,23.38,0,0,1,6.67.67l-.93,5.51a12.54,12.54,0,0,0-3-.45c-1.45,0-2.74.52-2.74,2V34.9h5.94l-.41,5.39H43V59H36V40.29H32.32Z" fill="#dbc3c3"/></svg><p></p></a></li>
+            </ul>
+            </footer>
+        </div>
+
+    </div>
+        <script>
+        function sendemail()
+        {
+            var email = document.getElementById("emailID").value;
+            var subject = ('My permanent subject line');
+            var body = ('My permanent body contents');
+            document.write('<a href="mailto: michjawo@gmail.com' + email + '?subject=' +subject+ '&body=' +body+ '">' + 'Click here to send an email' + '<'+'/a>');
+        }
+    </script>
+</body>
+
+
+</html>
